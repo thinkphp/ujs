@@ -228,7 +228,12 @@
 
              fn()
           }
-       
+   
+          /*@cc_on 
+          @if (@_jscript_version > 5.7) fns.push(fn)
+          @end
+          @*/
+
           //for ff
           if( w3c ) {
 
@@ -237,7 +242,7 @@
           //for ie
           if( doc.documentElement.doScroll ) {
 
-              (function() {
+               (function() {
 
                 try {
                   doc.documentElement.doScroll("left")
