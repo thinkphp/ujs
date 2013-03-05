@@ -110,3 +110,7 @@ $.ready(function() {
    $("pre code").load("pre.html")
 
 ```
+# Examples:
+
+[http://thinkphp.ro/apps/js-hacks/ujs/examples/]
+[http://thinkphp.ro/apps/js-hacks/ujs/examples/]: http://thinkphp.ro/apps/js-hacks/ujs/examples/
