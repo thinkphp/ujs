@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>u JS .css()</title>
+<style type="text/css">
+pre, code {
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  overflow: auto;
+  font-family: courier;
+  background: ghostwhite;
+  border: 1px solid #ddd;
+}
+
+code {
+  padding: 2px 5px;
+}
+
+pre code {
+  padding: 0;
+  margin-bottom: 0;
+  border: 0;
+}
+
+pre:before,
+pre:after {
+  content: '';
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+
+}
+
+pre:before {
+  border-top: 1px solid hsla( 0, 0%, 100%, 1 );
+  top: 0;
+}
+
+pre:after {
+  border-top: 1px solid hsla( 0, 0%, 0%, 0.05 );
+  bottom: 0px;
+}
+</style>
+<script type="text/javascript" src="../src/u.js"></script>
+<script type="text/javascript">
+
+$.ready(function() {
+
+    $("p").bind('mouseover', function(){
+          $(this).css("color: orange;font-size: 20px")
+    })
+
+    $("p").bind('mouseout', function(){
+          $(this).css("color: #000;font-size: 14px")
+    })
+
+})
+
+
+</script>
+</head>
+<body>
+<h2>u JS .css() - set one or more CSS properties for every matched element</h2>
+<p>Just roll the mouse over me.</p>
+<p>Or me to see a color change.</p>
+<pre><code>
+$.ready(function() {
+
+    $("p").bind('mouseover', function(){
+          $(this).css("color: orange;font-size: 20px")
+    })
+
+    $("p").bind('mouseout', function(){
+          $(this).css("color: #000;font-size: 14px")
+    })
+
+})
+</code></pre>
+</body>
+</html>

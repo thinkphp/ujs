@@ -1,0 +1,9 @@
+$.ready(function() {
+
+        $.ajax("GET", "h1.html", function( data ){
+
+               $("h1").html( data )
+        })
+
+        $("pre code").load("pre.html")
+})

@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>u JS</title>
+<style type="text/css">
+pre, code {
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  overflow: auto;
+  font-family: courier;
+  background: ghostwhite;
+  border: 1px solid #ddd;
+}
+
+code {
+  padding: 2px 5px;
+}
+
+pre code {
+  padding: 0;
+  margin-bottom: 0;
+  border: 0;
+}
+
+pre:before,
+pre:after {
+  content: '';
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+
+}
+
+pre:before {
+  border-top: 1px solid hsla( 0, 0%, 100%, 1 );
+  top: 0;
+}
+
+pre:after {
+  border-top: 1px solid hsla( 0, 0%, 0%, 0.05 );
+  bottom: 0px;
+}
+</style>
+<script type="text/javascript" src="../src/u.js"></script>
+<script type="text/javascript">
+
+$.ready(function() {
+
+    $("#menu").delegate("li a", 'click', function(e) {
+
+          var ul = this.parentNode.querySelectorAll('ul')[0]
+
+          if(ul.style.display == '' || ul.style.display == 'block') {
+
+             $(ul).css("display: none") 
+
+          } else if(ul.style.display == 'none') {
+
+             $(ul).css("display: block") 
+          }
+    })
+})
+
+
+</script>
+</head>
+<body>
+<h1>u JS .delegate() Event Delegation</h1>
+
+<ul id="menu">
+
+<li>
+   <a href="#">Event Delegation List 1</a>
+   <ul>
+       <li>item1</li>
+       <li>item2</li>
+       <li>item3</li>
+       <li>item4</li>
+       <li>item5</li>
+   </ul>
+</li>
+
+<li>
+   <a href="#">Event Delegation List 2</a>
+   <ul>
+       <li>item1</li>
+       <li>item2</li>
+       <li>item3</li>
+       <li>item4</li>
+       <li>item5</li>
+   </ul>
+</li>
+
+<li>
+   <a href="#">Event Delegation List 3</a>
+   <ul>
+       <li>item1</li>
+       <li>item2</li>
+       <li>item3</li>
+       <li>item4</li>
+       <li>item5</li>
+   </ul>
+</li>
+
+</ul>
+
+<pre><code>
+$.ready(function() {
+
+    $("#menu").delegate("li a", 'click', function(e) {
+
+          var ul = this.parentNode.querySelectorAll('ul')[0]
+
+          if(ul.style.display == '' || ul.style.display == 'block') {
+
+             $(ul).css("display: none") 
+
+          } else if(ul.style.display == 'none') {
+
+             $(ul).css("display: block") 
+          }
+    })
+})
+
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>u JS .ajax()</title>
+<style type="text/css">
+pre, code {
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  overflow: auto;
+  font-family: courier;
+  background: ghostwhite;
+  border: 1px solid #ddd;
+}
+
+code {
+  padding: 2px 5px;
+}
+
+pre code {
+  padding: 0;
+  margin-bottom: 0;
+  border: 0;
+}
+
+pre:before,
+pre:after {
+  content: '';
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+
+}
+
+pre:before {
+  border-top: 1px solid hsla( 0, 0%, 100%, 1 );
+  top: 0;
+}
+
+pre:after {
+  border-top: 1px solid hsla( 0, 0%, 0%, 0.05 );
+  bottom: 0px;
+}
+</style>
+<script type="text/javascript" src="../src/u.js"></script>
+<script type="text/javascript">
+
+$.ready(function() {
+
+        $.ajax("GET", "h1.html", function( data ){
+
+               $("h1").html( data )
+        })
+ 
+        $("pre code").load("pre.html")
+})
+
+
+</script>
+</head>
+<body>
+<h1>Loading...</h1>
+<pre><code>
+Loading...
+</code></pre>
+</body>
+</html>
