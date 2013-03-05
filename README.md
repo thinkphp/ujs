@@ -1,6 +1,6 @@
 # u JS - Super lightweight javascript library
 
-A super lightweight JS library for when you need to do something simple.
+A super lightweight JS library for when you need to do something simple (8K after minification).
 
 ## .ready() DOM Ready
 
