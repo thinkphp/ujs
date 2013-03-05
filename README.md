@@ -86,8 +86,19 @@ $.ready(function() {
    }) 
 ```     
 
+## $.each() each - static method
 
-## .ajax() Ajax
+```js
+
+   $.each(arr, function(elem, index){
+
+          console.log(elem + ' - ' + index)
+   })
+
+```
+
+
+## $.ajax() Ajax - static method
 
 ```js
 
