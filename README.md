@@ -1,6 +1,6 @@
 # u JS - Super lightweight javascript library
 
-A super lightweight JS library for when you need to do something simple.
+A super lightweight JS library for when you need to do something simple (4K after minification [http://yui.2clics.net/]).
 
 ## .ready() DOM Ready
 
@@ -110,3 +110,8 @@ $.ready(function() {
    $("pre code").load("pre.html")
 
 ```
+# Examples:
+
+[http://thinkphp.ro/apps/js-hacks/ujs/examples/]
+[http://thinkphp.ro/apps/js-hacks/ujs/examples/]: http://thinkphp.ro/apps/js-hacks/ujs/examples/
+[http://yui.2clics.net/]: http://yui.2clics.net/
