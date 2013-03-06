@@ -1,6 +1,6 @@
 # u JS - Super lightweight javascript library
 
-A super lightweight JS library for when you need to do something simple (3.55K after minification [http://yui.2clics.net/]).
+A super lightweight JS library for when you need to do something simple (5K after minification [http://yui.2clics.net/]).
 
 ## .ready( fn ) DOM Ready
 
@@ -77,6 +77,17 @@ Attach a handler to one event for all elements that match the selector based on 
 
 ```
 
+## .attr( attributeName, value )
+
+Set one attribute for every matched element.
+
+```js
+
+   $("#btn").attr("value", "Loading...") 
+
+```
+
+
 ## .css( properties )
 
 Set one or more CSS properties for every matched element.
@@ -139,9 +150,24 @@ Perform an asynchronous HTTP (Ajax) request.
    })
  
 ```
+
+## $.jsonp( url, callback ) - static method
+
+Perform a JSONP request
+
+```js
+
+   $.jsonp(url, function( data ){
+
+           console.log( data )
+   })
+ 
+```
+
 # Examples:
 
 [http://thinkphp.ro/apps/js-hacks/ujs/examples/]
 [http://thinkphp.ro/apps/js-hacks/ujs/examples/]: http://thinkphp.ro/apps/js-hacks/ujs/examples/
 [http://yui.2clics.net/]: http://yui.2clics.net/
 [NodeList]: https://developer.mozilla.org/en-US/docs/DOM/NodeList
+
