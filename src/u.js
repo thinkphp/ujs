@@ -177,6 +177,14 @@
                             if(this.nodeType == 1 && this.nodeName.toLowerCase() == 'input') 
 
                                return this.value
+                        })                
+          }
+
+          elements.attr = function(p, v) {
+
+                        elements.each(function(){
+
+                               this.setAttribute(p, v)
                         })
                 
           }
@@ -301,8 +309,74 @@
                      http.send(postData || null);
       };
 
+      u.jsonp = function(url, callback) {
+
+               var fn = "ujs_jsonp_" + (new Date().getTime()),
+
+               //evaluate the json from callback
+               evalJsonp = function( callback ) {
+
+                 return function( data ) {
+
+                   var validjson = false
+
+                   if(typeof data == 'string') {
+
+                   try {
+
+                        validjson = JSON.parse(data)
+
+                   }catch(e) {} 
+
+                   } else if(typeof data == 'object') {
+
+                     validjson = data
+
+                   } else {
+
+                     validjson = JSON.parse(JSON.stringify(data));
+                   }
+ 
+                   if( validjson ) {
+ 
+                    callback( validjson )
+
+                  } else {
+
+                    if(window.console) console.log('JSONP call returned invalid JSON or empty JSON')
+                  }
+                }//end func 
+               },
+
+               //get the head element
+               head = document.getElementsByTagName("head")[0];
+
+           //define a callback
+           window[ fn ] = evalJsonp( callback );
+
+           //replace the =? for callback
+           url = url.replace('=?','=' + fn) 
+
+           //create an element script
+           var s = document.createElement('script');
+
+               //set type attribute
+               s.type = 'text/javascript';
+
+               //set src attribute
+               s.src = url;
+
+               //append to the head
+               head.appendChild(s);
+    };
+
   context["$"] = u;
 
 })(window);
 
- 
+
+
+
+
+
+
