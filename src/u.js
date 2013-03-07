@@ -87,8 +87,9 @@
 
                          elements = Array.fromSequence( doc[ querySelectorAll ]( selector ) )
                       }
-                //for debugger
-                if(window.console) console.log(elements)
+
+                      //for debugger
+                      if(window.console) console.log(elements)
                 } 
 
           } else if(selector.nodeType){
