@@ -1,6 +1,6 @@
 # u JS - Super lightweight javascript library
 
-A super lightweight JS library for when you need to do something simple (4K after minification [http://yui.2clics.net/]).
+A super lightweight JS library for when you need to do something simple (3.55K after minification [http://yui.2clics.net/]).
 
 ## .ready() DOM Ready
 
@@ -14,7 +14,9 @@ $.ready(function() {
 ## $(selector) Selectors
 
 Uses `querySelectorAll` to return a list of the elements withing the document (using depth-first pre-order traversal of the document's nodes) that
-match the specified group of selectors. The object returned is not an array, not a NodeList (use Array.prototype.slice).
+match the specified group of selectors. The object returned is an non-live NodeList of element objects( invoked Array.prototype.slice to make arguments a real array ).
+note: querySelectorAll was introduced in the WebApps API.
+note: read Live vs Static Node Lists http://darcyclarke.me/development/live-vs-static-node-lists/
 
 ```js
 
