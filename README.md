@@ -2,7 +2,9 @@
 
 A super lightweight JS library for when you need to do something simple (3.55K after minification [http://yui.2clics.net/]).
 
-## .ready() DOM Ready
+## .ready( fn ) DOM Ready
+
+Registers a function (callback) to run when the DOM is ready.
 
 ```js
 $.ready(function() {
@@ -18,15 +20,17 @@ match the specified group of selectors. The object returned is an non-live [Node
 note: querySelectorAll was introduced in the WebApps API.
 note: read Live vs Static Node Lists http://darcyclarke.me/development/live-vs-static-node-lists/
 
-```js
-
 $(selector) - is a string containing one or more CSS selectors separated by commas.
 
-alert($("div p")) 
+```js
+
+console.log( $( "div p" ) ) 
 
 ```
 
-## .each() each
+## .each( fn ) each
+
+Sets a function to fire for each element in the result set with "this" inside.
 
 ```js
 $.ready(function() {
@@ -38,7 +42,11 @@ $.ready(function() {
 })
 ```
 
-## .bind() Event Handling
+## .bind(ev, fn) Event Handling
+
+Attach a handler (a function to execute each time the event is triggered ) to an event (a string containing one DOM event such as `click` or `mouseover`) 
+for the elements in the result set. Note: `this` object inside the callback.
+
 
 ```js
    $("h2").bind('click', function( e ){
@@ -67,7 +75,7 @@ $.ready(function() {
 
 ```
 
-## .css()
+## .css( properties )
 
 ```js
     $("p").bind('mouseover', function(){
@@ -79,7 +87,7 @@ $.ready(function() {
     })
 ```
 
-## .html()
+## .html( HTMLContent )
 
 ```js
    $("p").bind("click", function(){
@@ -88,7 +96,20 @@ $.ready(function() {
    }) 
 ```     
 
-## $.each() each - static method
+## .load( url )
+
+Loads data from a server and puts the returned data into the selected element.
+
+```js
+
+   //load the content of the file 'pre.html' into a specific '<pre><code>' element.
+   $("pre code").load("pre.html")
+
+```
+
+## $.each(arr, fn) each - static method
+
+Executes a provided function once per array element.
 
 ```js
 
@@ -100,7 +121,9 @@ $.ready(function() {
 ```
 
 
-## $.ajax() Ajax - static method
+## $.ajax(method, url, callback) Ajax - static method
+
+Perform an asynchronous HTTP (Ajax) request.
 
 ```js
 
@@ -109,8 +132,6 @@ $.ready(function() {
         $("h1").html( data )
    })
  
-   $("pre code").load("pre.html")
-
 ```
 # Examples:
 
