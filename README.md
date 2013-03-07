@@ -13,14 +13,14 @@ $.ready(function() {
 })
 ```
 
-## $(selector) Selectors
+## $( selector ) Selectors
 
 Uses `querySelectorAll` to return a list of the elements withing the document (using depth-first pre-order traversal of the document's nodes) that
 match the specified group of selectors. The object returned is an non-live [NodeList] of element objects( invoked Array.prototype.slice to make arguments a real array ).
 note: querySelectorAll was introduced in the WebApps API.
 note: read Live vs Static Node Lists http://darcyclarke.me/development/live-vs-static-node-lists/
 
-$(selector) - is a string containing one or more CSS selectors separated by commas.
+$( selector ) - is a string containing one or more CSS selectors separated by commas.
 
 ```js
 
@@ -42,7 +42,7 @@ $.ready(function() {
 })
 ```
 
-## .bind(ev, fn) Event Handling
+## .bind( ev, fn ) Event Handling
 
 Attach a handler (a function to execute each time the event is triggered ) to an event (a string containing one DOM event such as `click` or `mouseover`) 
 for the elements in the result set. Note: `this` object inside the callback.
@@ -55,7 +55,9 @@ for the elements in the result set. Note: `this` object inside the callback.
    })
 ```
 
-## .delegate() Event Delegation
+## .delegate( selector, ev, fn ) Event Delegation
+
+Attach a handler to one event for all elements that match the selector based on result set elements.
 
 ```js
 
@@ -77,6 +79,8 @@ for the elements in the result set. Note: `this` object inside the callback.
 
 ## .css( properties )
 
+Set one or more CSS properties for every matched element.
+
 ```js
     $("p").bind('mouseover', function(){
           $(this).css("color: orange;font-size: 20px")
@@ -89,8 +93,10 @@ for the elements in the result set. Note: `this` object inside the callback.
 
 ## .html( HTMLContent )
 
+Set the HTML contents of every matched element.
+
 ```js
-   $("p").bind("click", function(){
+   $("p").bind("click", function() {
 
       $(this).html("u JS .html() - set the HTML contents of every matched element"); 
    }) 
@@ -107,7 +113,7 @@ Loads data from a server and puts the returned data into the selected element.
 
 ```
 
-## $.each(arr, fn) each - static method
+## $.each( arr, fn ) - static method
 
 Executes a provided function once per array element.
 
@@ -121,7 +127,7 @@ Executes a provided function once per array element.
 ```
 
 
-## $.ajax(method, url, callback) Ajax - static method
+## $.ajax( method, url, callback ) - static method
 
 Perform an asynchronous HTTP (Ajax) request.
 
