@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>Autosuggest.js Plugin for u JS</title>
+<style type="text/css">
+html body {
+font-family:"Open Sans",Helvetica,"Lucida Grande","charcoal cy",arial,sans-serif;
+}
+h1 {color: #393}
+h2 {color: #999}
+pre, code {
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  overflow: auto;
+  font-family: courier;
+  background: ghostwhite;
+  border: 1px solid #ddd;
+}
+
+code {
+  padding: 2px 5px;
+}
+
+pre code {
+  padding: 0;
+  margin-bottom: 0;
+  border: 0;
+}
+
+pre:before,
+pre:after {
+  content: '';
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+
+}
+
+pre:before {
+  border-top: 1px solid hsla( 0, 0%, 100%, 1 );
+  top: 0;
+}
+
+pre:after {
+  border-top: 1px solid hsla( 0, 0%, 0%, 0.05 );
+  bottom: 0px;
+}
+
+input { 
+padding: 10px 11px; 
+color: #999; 
+width: 300px; 
+border: 1px solid #ddd; 
+font-size: 22px; 
+transition: box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-webkit-transition: box-shadow 0.25s linear 0s, color 0.15s linear 0s;
+-moz-transition: box-shadow 0.25s linear 0s, color 0.15s linear 0s;
+-o-transition: box-shadow 0.25s linear 0s, color 0.15s linear 0s;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset; 
+font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+}
+input:focus { 
+color: #767676;
+border-color: #c5d7ee;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(170, 200, 240, 0.9);
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(170, 200, 240, 0.9);
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(170, 200, 240, 0.9);
+}
+</style>
+</head>
+<body>
+
+<h1>Autosuggest.js</h1>
+<p class="description">The autosuggest widget provides suggestions while you type into the field. The datasource is a simple JS array, provided to the widget using the second @param `suggestions`.</p>
+<h2>Syntax:</h2>
+<h3> Autosuggest ( #id, suggestions )</h3>
+<table>
+<tr><td><label for="tags">Select a programming language</label></td><td><input type="text" id="tags" /></td></tr>
+</table>
+
+<script type="text/javascript" src="../src/u.js"></script>
+<script type="text/javascript" src="../plugins/autosuggest/autosuggest.js"></script>
+<script type="text/javascript">
+
+      var tags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"],
+
+      suggest = Autosuggest('#tags', tags);
+
+</script>
+<pre><code>
+  var tags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"],
+
+      suggest = Autosuggest('#tags', tags);
+
+</code></pre>
+</body>
+</html>
+
+
+
